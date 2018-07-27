@@ -1,0 +1,7 @@
+surname,name,phone,mail,expectedErrorMessage
+,Vasilii,79999999999,vasya44@gmaill.comm,Поле Фамилия обязательно для заполнения.
+Egorov,,79999999999,vasya44@gmaill.comm,Поле Имя обязательно для заполнения.
+Egorov,Vasilii,,vasya44@gmaill.comm,Поле Телефон обязательно для заполнения.
+Egorov,Vasilii,1111111111,vasya44@gmaill.comm,Номер телефона имеет ошибочный формат.
+Egorov,Vasilii,79999999999,,Поле Электронная почта обязательно для заполнения.
+Egorov,Vasilii,79999999999,1,Поле Электронная почта должно быть действительным электронным адресом.
