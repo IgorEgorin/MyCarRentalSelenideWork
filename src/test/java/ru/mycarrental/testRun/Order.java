@@ -41,6 +41,7 @@ public class Order extends Precondition {
 
         selectCarPage.selectFirstCarFromList();
 
+
         offerPage.selectTwoNavigatorOneCameraOneFridgeTwoKidSeats()
                 .enterSurnameNameMiddleName("Егоров", "Василий", "Александрович")
                 .enterPhoneAndemail("+79991654866", "vasya44@gmaill.comm")
@@ -71,7 +72,9 @@ public class Order extends Precondition {
 
         offerPage.clickOnCheckBoxIagreeAndPressSubmitButton();
 
-        Thread.sleep(5000);
+        sberbankPage.
+                enterCreditCardNumberExpiredMonthAndExpiredYear(
+                        "4111 1111 1111 1111", "12", "19", "VASILII EGOROV", "123");
 
         Assert.assertTrue(variablePriceItogoFromOfferPage.equals(sberbankPage.getSberbankPageItogoPrice())
                 ,"Price Itogo from OfferPage is" + " " + variablePriceItogoFromOfferPage + "\n"
@@ -82,11 +85,8 @@ public class Order extends Precondition {
                 ,"Price Online from OfferPage is" + " " + variablePriceOnLineFromOfferPage + "\n"
                         + "Price Itogo from SberbankPage is " + " "
                         + sberbankPage.getSberbankPageItogoPrice());
-        sberbankPage.
-                enterCreditCardNumberExpiredMonthAndExpiredYearAndPressSubmit(
-                        "4111 1111 1111 1111", "12", "19", "VASILII EGOROV", "123");
 
-
+        sberbankPage.sberbankPageSubmitButtonClick();
 
         Assert.assertTrue(variablePriceItogoFromOfferPage.equals(validationPaymentBySms
                         .getValidationPaymentBySmsItogoPrice())
@@ -104,8 +104,6 @@ public class Order extends Precondition {
 
         validationPaymentBySms.enterSmsAndSubmitApayment("12345678");
 
-
-        Thread.sleep(10000);
         String priceTitlePerDayWithDiscountFromSuccessPage = successPage
                 .getSuccessPagePricePerDayWithDiscount()
                 .getText();

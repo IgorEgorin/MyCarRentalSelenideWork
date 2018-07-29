@@ -101,7 +101,7 @@ public class NegativeMessageAndUnvalidCardsTest extends Precondition {
 
         displayedSberbankPage();
 
-        sberbankPage.enterCreditCardNumberExpiredMonthAndExpiredYearAndPressSubmit(variableNumberOfCard
+        sberbankPage.enterCreditCardNumberExpiredMonthAndExpiredYear(variableNumberOfCard
                 , variableMonthOfCard, variableYearOfCard, variableOwnerName, variableCVV);
 
         validationPaymentBySms.enterSmsAndSubmitApayment(variableEnterSMSnumber);
@@ -118,7 +118,7 @@ public class NegativeMessageAndUnvalidCardsTest extends Precondition {
 
         displayedSberbankPage();
         sberbankPage.
-                enterCreditCardNumberExpiredMonthAndExpiredYearAndPressSubmit(
+                enterCreditCardNumberExpiredMonthAndExpiredYear(
                         "4111 1111 1111 1111", "12", "19", "VASILII EGOROV", "123");
         validationPaymentBySms.enterSmsAndSubmitApayment("d");
 

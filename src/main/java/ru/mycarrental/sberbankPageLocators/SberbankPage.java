@@ -32,14 +32,13 @@ public class SberbankPage {
         this.sberbankErrorMessage = $("#loginError");
     }
 
-    public void enterCreditCardNumberExpiredMonthAndExpiredYearAndPressSubmit(
+    public void enterCreditCardNumberExpiredMonthAndExpiredYear(
             String cardNumber, String expM, String expY, String clientNameandSurname, String cvc) {
         sberbankPageCardNumber.sendKeys(cardNumber);
         sberbankPageExpiredMonth.sendKeys(expM);
         sberbankPageExpiredYear.sendKeys(expY);
         sberbankPageClientNameAndSurname.sendKeys(clientNameandSurname);
         sberbankPageCvc.sendKeys(cvc);
-        sberbankPageSubmitButton.click();
     }
 
     public String getSberbankPageItogoPrice() {
@@ -54,4 +53,9 @@ public class SberbankPage {
     public String getSberbankErrorMessage() {
         return sberbankErrorMessage.getText();
     }
+
+    public void sberbankPageSubmitButtonClick() {
+        sberbankPageSubmitButton.click();
+    }
 }
+

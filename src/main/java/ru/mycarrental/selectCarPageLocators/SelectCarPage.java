@@ -15,7 +15,7 @@ public class SelectCarPage {
     private SelenideElement selectCarPageErrFirstCalendarSurroundRed;
 
     public SelectCarPage() {
-        this.selectFirstCarInList = $("[class=\"search-result-title ng-binding\"]");
+        this.selectFirstCarInList = $("[class=\"search-list-button\"]");
         this.selectCarPageFirstCarInListPayForDayWithDiscount = $(By.xpath("//strong[@class=\"ng-binding\"]"));
 
         this.selectCarPageErrMessZeroCarsFound = $("[class=\"search-result-title ng-binding\"]");
