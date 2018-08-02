@@ -14,17 +14,28 @@ public class Order extends Precondition {
     public void orderWithPositiveData(Map<String, String> testData) throws Exception {
 
 
-
-        String amountOfRIGHTarrowClickInsideReturnCalendar = testData.get("AmountOfClickOnRightArrow");
-        String doWeUseAPromocodeBoolean = testData.get("DoWeUseApromocode");
+        String varCityTakeAcar = testData.get("CityTakeAcar");
+        String varCityReturnAcar = testData.get("CityReturnAcar");
         String rentPeriodIsShowedInConsole = testData.get("DaysOfRent");
+        String amountOfRIGHTarrowClickInsideReturnCalendar = testData.get("AmountOfClickOnRightArrow");
         String promocodeForParameter = testData.get("PromoCodeNumber");
+        String doWeUseAPromocodeBoolean = testData.get("DoWeUseApromocode");
         String timePeriodForParameter = testData.get("TimeOfRent");
         String timePeriodForConsole = testData.get("TimePeriodConsole");
 
 
+
+//        String amountOfRIGHTarrowClickInsideReturnCalendar = "6";
+//        String doWeUseAPromocodeBoolean = "do not use";
+//        String rentPeriodIsShowedInConsole = "7";
+//        String promocodeForParameter = "0";
+//        String timePeriodForParameter = "RoundToLowSideDefault";
+//        String timePeriodForConsole = "13:00-13:00";
+
+
+
         mainPage.enterTakeAndReturnCities(
-                "Алушта, Республика Крым", "Бахчисарай, Республика Крым")
+                varCityTakeAcar, varCityReturnAcar)
                 .setNewCalendarsDataBecauseCarsInListIsEnding()
                 .selectDaysPeriod(amountOfRIGHTarrowClickInsideReturnCalendar)
                 .selectTimePeriod(timePeriodForParameter)

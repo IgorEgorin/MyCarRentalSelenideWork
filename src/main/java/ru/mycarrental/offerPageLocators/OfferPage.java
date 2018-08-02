@@ -110,7 +110,7 @@ public class OfferPage {
         offerPageListSelectQuantityOfNavigator.click();
         offerPageListSelectTwoUnitsNavigator.click();
         offerPageCheckBoxCamera.click();
-        offerPageCheckBoxFridge.click();
+        offerPageCheckBoxFridge.scrollTo().click();
         offerPageCheckBoxKidSeat.click();
         offerPageListSelectQuantityOfKidSeat.click();
         offerPageListSelectTwoUnitsOfKidSeat.click();
