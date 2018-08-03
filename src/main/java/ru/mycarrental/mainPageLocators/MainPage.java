@@ -58,12 +58,12 @@ public class MainPage {
         return new MainPage();
     }
 
-    public MainPage selectDaysPeriod(String amountOfLEFTarrowClickInsideReturnCalendar) {
+    public MainPage selectDaysPeriod(String amountOfarrowClickInsideReturnCalendar) {
         System.out.println("select days period ");
-        if (!amountOfLEFTarrowClickInsideReturnCalendar.contains("0")){
+        if (!amountOfarrowClickInsideReturnCalendar.contains("0")){
             mainPageDataReturn.click();
 
-            for (int i = 0; i < Integer.valueOf(amountOfLEFTarrowClickInsideReturnCalendar); i++) {
+            for (int i = 0; i < Integer.valueOf(amountOfarrowClickInsideReturnCalendar); i++) {
                 mainPageDataReturn.sendKeys(Keys.RIGHT);
             }
             mainPageDataReturn.pressEnter();

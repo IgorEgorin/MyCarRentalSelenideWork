@@ -17,20 +17,11 @@ public class Order extends Precondition {
         String varCityTakeAcar = testData.get("CityTakeAcar");
         String varCityReturnAcar = testData.get("CityReturnAcar");
         String rentPeriodIsShowedInConsole = testData.get("DaysOfRent");
-        String amountOfRIGHTarrowClickInsideReturnCalendar = testData.get("AmountOfClickOnRightArrow");
+        String amountOfRIGHTarrowClickInsideReturnCalendar = testData.get("AmountOfClickOnRightArrowInsideReturnCalendar");
         String promocodeForParameter = testData.get("PromoCodeNumber");
         String doWeUseAPromocodeBoolean = testData.get("DoWeUseApromocode");
         String timePeriodForParameter = testData.get("TimeOfRent");
         String timePeriodForConsole = testData.get("TimePeriodConsole");
-
-
-
-//        String amountOfRIGHTarrowClickInsideReturnCalendar = "6";
-//        String doWeUseAPromocodeBoolean = "do not use";
-//        String rentPeriodIsShowedInConsole = "7";
-//        String promocodeForParameter = "0";
-//        String timePeriodForParameter = "RoundToLowSideDefault";
-//        String timePeriodForConsole = "13:00-13:00";
 
 
 
@@ -42,7 +33,7 @@ public class Order extends Precondition {
                 .enterPromoCodeAndSubmitSearch(promocodeForParameter)
         ;
 
-
+//        Thread.sleep(80000);
         System.out.println("We have chosen " + " " + rentPeriodIsShowedInConsole + " " + "day's of rent\n"
                 + "Time period is" + " " + timePeriodForConsole
                 + "\nAnd We" + " " + doWeUseAPromocodeBoolean + " " + "promocode" );
@@ -73,6 +64,10 @@ public class Order extends Precondition {
 
         String variableCarDeliveryToDestionationFromOfferPage = offerPage.getPriceCarDeliveryToDestination();
         String variableCarReturnBackFromOfferPage = offerPage.getPriceCarReturnBack();
+
+//        Assert.assertTrue(offerPage.getAmmountOfdaysRentFromOfferPage().equals(rentPeriodIsShowedInConsole)
+//        ,"\nAmmount of days from CSV is:" + " " + rentPeriodIsShowedInConsole +
+//        "\nAmmount of days on offerPage is:" + " " + offerPage.getAmmountOfdaysRentFromOfferPage());
 
         Assert.assertTrue(
                 pricePerDayWithDiscountFromSelectCarPage.

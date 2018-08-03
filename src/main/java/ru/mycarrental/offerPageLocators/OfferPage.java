@@ -20,6 +20,7 @@ public class OfferPage {
     private SelenideElement priceCarDeliveryToDestination;
     private SelenideElement priceCarReturnBack;
     private SelenideElement priceOnLinePaymentFieldFromOfferPage;
+    private SelenideElement ammountOfdaysRentFromOfferPage;
 
     private SelenideElement offerPageCheckBoxNavigator;
     private SelenideElement offerPageListSelectQuantityOfNavigator;
@@ -69,6 +70,7 @@ public class OfferPage {
         this.priceCarDeliveryToDestination = $("[ng-show=\"extras.pick_up_location_fee > 0\"] [class=\"ng-binding\"]");
         this.priceCarReturnBack = $("[ng-show=\"extras.drop_off_location_fee > 0\"] [class=\"ng-binding\"]");
         this.priceOnLinePaymentFieldFromOfferPage = $("[class=\"checkout-price-total-value\"] [class=\"ng-binding\"]",0);
+        this.ammountOfdaysRentFromOfferPage = $("[class=\"left-checkout-days-value ng-binding\"]",0);
 
         this.offerPageCheckBoxNavigator = $("[class=\"checkout-sub-checkbox\"]", 0);
         this.offerPageListSelectQuantityOfNavigator = $("[class=\"checkout-sub-qty\"]", 0);
@@ -248,6 +250,10 @@ public class OfferPage {
 
     public String getErrorMessageAllClassOfferPage() {
         return errorMessageAllClassOfferPage.getText();
+    }
+
+    public String getAmmountOfdaysRentFromOfferPage() {
+        return ammountOfdaysRentFromOfferPage.getText().replaceAll(" сут.","");
     }
 
     public SelenideElement getOfferPageMakeAreservation() {
